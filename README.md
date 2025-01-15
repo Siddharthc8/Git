@@ -1,1 +1,1 @@
-Welcome to the Design and Testbench Repository! This repository contains a collection of Verilog and SystemVerilog design files, along with their respective testbenches. It also includes UVM (Universal Verification Methodology) testbenches for advanced verification needs.
+Welcome to the ASIC Design and Testbench Repository! This repository contains a collection of Verilog and SystemVerilog design files, along with their respective testbenches. It also includes UVM (Universal Verification Methodology) testbenches for advanced verification needs.
