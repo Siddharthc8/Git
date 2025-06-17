@@ -193,12 +193,12 @@ env e;
     virtual task run_phase(uvm_phase phase);
  
     phase.raise_objection(this);
-    //e.a.seq.set_arbitration(UVM_SEQ_ARB_STRICT_FIFO);
+    //e.a.seq.set_arbitration(UVM_SEQ_ARB_STRICT_FIFO);       // Priority works only when enabled
       
     // Default arbitration mechanism is "UVM_SEQ_ARB_STRICT_FIFO"
     fork  
-       s1.start(e.a.seq, null, 100);       // Executed alternativel as default if FIFO mechanism
-       s2.start(e.a.seq, null, 200);       // Priority does not have any effect here 
+       s1.start(e.a.seq, null, 100);       // Executed alternatively as default if FIFO mechanism
+       s2.start(e.a.seq, null, 200);       // Priority does not have any effect here as we have commented out the set_arbitration method
     join  
       
       

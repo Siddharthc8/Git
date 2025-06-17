@@ -35,7 +35,7 @@ class first extends uvm_object;
   endfunction 
   
   `uvm_object_utils_begin(first)
-  `uvm_field_int(data, UVM_DEFAULT);
+  `uvm_field_int(data, UVM_DEFAULT | UVM_NO_RELNOTES);
   `uvm_object_utils_end
   
 endclass

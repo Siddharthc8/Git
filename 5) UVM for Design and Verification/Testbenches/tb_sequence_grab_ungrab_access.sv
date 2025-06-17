@@ -19,10 +19,12 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+
+
+
+
 //   NOTE : When lock and grab are used in multiple sequences grab takes higher priority
 
-
-//////////////////////////////////////////////////////
  
 `include "uvm_macros.svh"
 import uvm_pkg::*;
@@ -59,6 +61,8 @@ transaction trans;
  
    virtual task body();
      
+     lock(m_sequencer);
+     
            repeat(3) begin
  
            `uvm_info("SEQ1", "SEQ1 Started" , UVM_NONE); 
@@ -69,6 +73,8 @@ transaction trans;
            `uvm_info("SEQ1", "SEQ1 Ended" , UVM_NONE); 
  
            end
+           
+     unlock(m_sequencer);
      
    endtask
  

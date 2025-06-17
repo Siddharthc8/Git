@@ -53,7 +53,7 @@ endclass
   obj o;
   
   initial begin
-    o = obj::type_id::create("o");      // Not necessary to use this type to create a new container. c an use new methtod as well
+    o = obj::type_id::create("o");      // Not necessary to use this type to create a new container. can use new methtod as well
 //    o = new("o");
     o.print();                 // calling can be done just like normal print method
   end

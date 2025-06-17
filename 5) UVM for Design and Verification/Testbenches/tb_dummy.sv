@@ -23,10 +23,28 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-typedef enum bit [1:0] {add = 0, mul = 1} oper;
-
 module tb_dummy();
 
+ //-----------------------------------------------------------------
+ //Here config class is just an object that issued to specify the ACTIVE or PASSIVE type of the testbench
+ //   If DRIVER and MONITOR = ACTIVE  
+ //     If MONITOR only = PASSIVE
+ //   Created before transaction and used to "GET" from AGENT class and "SET" in ENV class 
+  
+class config_dff extends uvm_object;
+  `uvm_object_utils(config_dff)
+ 
+  uvm_active_passive_enum agent_type = UVM_ACTIVE; 
+  
+  function new(input string path = "config_dff");
+    super.new(path);
+   endfunction 
+  
+endclass
+
+//--------------------------------------------------------------------
+
+typedef enum bit [1:0] {add = 0, mul = 1} oper;    // This stays inside the module so no problem
 
 class add_transaction extends uvm_sequence_item;
 `uvm_object_utils(add_transaction)
@@ -68,7 +86,9 @@ endclass
 
 class add_seq2 extends uvm_sequence#(add_transaction);
 `uvm_object_utils(add_seq2)
-
+    
+    add_transaction tr;
+    
     function new(string path = "add_seq2");
     super.new(path);
     endfunction

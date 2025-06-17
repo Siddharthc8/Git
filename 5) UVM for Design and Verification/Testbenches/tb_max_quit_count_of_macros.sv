@@ -43,25 +43,25 @@ class driver extends uvm_driver;
     `uvm_error("DRV", "Second Real Error");
     /*
      #10;
-    `uvm_fatal("DRV", "Simulation cannot continue DRV1"); /// uvm_exit
+    `uvm_fatal("DRV", "Simulation cannot continue DRV1"); /// uvm_exit             
     #10;
-    `uvm_fatal("DRV1", "Simulation Cannot Continue DRV1");
+    `uvm_fatal("DRV1", "Simulation Cannot Continue DRV1");                         
    */
-  endtask
+  endtask                                                                          
   
- 
+                                                                                   
   
-endclass
+endclass                                                                           
  
-/////////////////////////////////////////////
+/////////////////////////////////////////////                                      
  
- /*
+ /*                                                                                
         UVM_NO_ACTION - no action 
-        UVM_DISPLAY - displays on the console 
+        UVM_DISPLAY - displays on the console                                      
         UVM_LOG - Reprts to the file for the severity,ID pair
-        UVM_COUNT - Counts the number of occurance
+        UVM_COUNT - Counts the number of occurance                                 
         UVM_EXIT - Terminates the simulation
-        UVM_CALL_HOOK - Callback to report jook mathods
+        UVM_CALL_HOOK - Callback to report jook mathods                            
         UVM_STOP - #stops and puts the simulaton in interactive mode 
         UVM_RM_RECORD - Sends the reprt to the recorder
  */

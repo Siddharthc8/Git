@@ -28,7 +28,7 @@ FIELD MACROS or CORE METHODS
 
 REPRESENTATION
 
-A radix for printing and recording can be specified by OR’ing one of the following constants in the FLAG argument
+A radix for printing and recording can be specified by ORï¿½ing one of the following constants in the FLAG argument
 
             UVM_BIN	        Print / record the field in binary (base-2).
             UVM_DEC	        Print / record the field in decimal (base-10).
@@ -83,10 +83,14 @@ endclass
   obj o;
   
   initial begin
-    o = new("obj");
-    o.randomize();
-    o.print(uvm_default_table_printer);  // Print can only be used on FIELD MACROS and the way the output should eb displayed can be mentioned(TABLE, TREE,)
-                                                
+    int i;
+      for(i=0;i<3;i++)
+      begin
+        o = new("obj");
+        o.randomize();
+        o.print(uvm_default_table_printer);  // Print can only be used on FIELD MACROS and the way the output should eb displayed can be mentioned(TABLE, TREE,)
+        #5;
+      end                                             
   end
   
 endmodule

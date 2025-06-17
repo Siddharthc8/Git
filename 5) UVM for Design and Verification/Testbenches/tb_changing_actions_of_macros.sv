@@ -62,7 +62,7 @@ endclass
         UVM_LOG - Reprts to the file for the severity,ID pair
         UVM_COUNT - Counts the number of occurance
         UVM_EXIT - Terminates the simulation
-        UVM_CALL_HOOK - Callback to report jook mathods
+        UVM_CALL_HOOK - Callback to report hook mathods
         UVM_STOP - #stops and puts the simulaton in interactive mode 
         UVM_RM_RECORD - Sends the reprt to the recorder
  */

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-
+//   NOTE : priority method is mentioning priority in the test env check below
 //   NOTE : When lock and grab are used in multiple sequences grab takes higher priority
 
 
@@ -211,9 +211,9 @@ env e;
     phase.raise_objection(this);
    // e.a.seq.set_arbitration(UVM_SEQ_ARB_STRICT_FIFO);
       
-      
+                                                // By default they go alternatively
     fork  
-       s2.start(e.a.seq, null, 200);
+       s2.start(e.a.seq, null, 200);            // Here SEQ 2 has more priority than SEQ 1 so SEQ 2 is executed first
        s1.start(e.a.seq, null, 100);  
     join  
       

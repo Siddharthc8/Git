@@ -60,7 +60,7 @@ class test extends uvm_test;
         e = env::type_id::create("e", this);
     
         uvm_config_db#(int)::set(null, "uvm_test_top", "data", 12);    // Context + Instance name + Key + Value
-                                                                // When you set context to "null" all the classes have access to this variable or data 
+                                                                    // When you set context to "null" all the classes have access to this variable or data 
     endfunction
 
 endclass

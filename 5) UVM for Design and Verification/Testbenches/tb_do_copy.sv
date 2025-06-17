@@ -45,7 +45,7 @@ class obj extends uvm_object;
   
   virtual function void do_copy(uvm_object rhs);     // Should match the template
     obj temp;
-    $cast(temp, rhs);            // Aotomatically creates a handle for "rhs"
+    $cast(temp, rhs);            // Automatically creates a handle for "rhs"
     super.do_copy(rhs);                            // Should match the template
     
      this.a = temp.a;

@@ -58,8 +58,8 @@ endclass
   
   initial begin
     d = new("DRV", null);
-   // d.set_report_severity_override(UVM_FATAL, UVM_ERROR);
-    d.set_report_severity_id_override(UVM_FATAL, "DRV", UVM_ERROR);
+   // d.set_report_severity_override(UVM_FATAL, UVM_ERROR);    Fatal -> Error
+    d.set_report_severity_id_override(UVM_FATAL, "DRV", UVM_ERROR);  // Fatal to Error only for "DRV" id
     d.run();
   end
   
