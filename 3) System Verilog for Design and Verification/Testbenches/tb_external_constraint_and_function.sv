@@ -19,6 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+module tb_external_constraint_and_function();
+
 
 class Generator;             // rand and randc are called modifiers
 
@@ -44,7 +46,6 @@ endclass
     endfunction
     
 
-module tb_external_constraint_and_function();
     
     Generator g;
     int status;

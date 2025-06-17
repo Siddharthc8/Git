@@ -23,6 +23,7 @@
 module tb_queue();
 
     int arr[$];   // adding $ sign inside square brackets makes it queue/stack
+    int arr_limited[$:10];   // queue of size 10
     int i, j;   
     
     initial begin         //  Methods for  queue / stack
@@ -48,5 +49,7 @@ module tb_queue();
         $display("Arr: %0p, size: %0d", arr, $size(arr));
                 
     end
+    
+
 
 endmodule

@@ -47,9 +47,13 @@ endclass
  
   
   Generator g;
+  int  mode;
   
   initial begin
     g = new();
+    
+    // To check the constraint mode
+    mode = g.control_rst_ce_implication.constraint_mode();  // Should not pass any arguments   Here the ans is 1 as ON by default
     
     // Syntax  --> Handler.constraint_name.constraint_mode(x);    // Where x --> 0 : OFF and 1 : ON
     g.control_rst_ce_implication.constraint_mode(0);   // To turn off a constraint

@@ -32,8 +32,11 @@ class Generator;
                        y inside { [ 0:50 ] };
                        z inside { [ 0:50 ] };
                     }
-    
+                    
 endclass
+    
+    
+    
     
     Generator g;
     

@@ -24,7 +24,7 @@ class Generator;
   }                                // When ce = 0,     rst = 1 is forced
    
 endclass
- 
+  
   
   Generator g;
   
