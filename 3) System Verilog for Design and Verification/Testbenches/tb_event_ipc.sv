@@ -9,19 +9,20 @@ module tb_event_ipc();
     event a1, a2;
     
     initial begin
-//        #10;
-        -> a1;
+        #10;           // This delay is given because if @9x) should be triggered it needs some time to set up and if it misses
+        -> a1;        //   it blocks the following instrctions as well. So Know "@" is blocking
         #10;
         -> a2;         // Triggering an event 
     end
     
 //  "@" operator takes in just the event name to sense
     initial begin
-        @(a1);         // Blocking assignment          // Edge triggered
+    
+        @(a1.triggered);         // Blocking assignment          // Edge triggered
         $display("a1 Event --> Received at : %0t", $time);
         
-        @(a2);         // Blocking assignment          // Edge triggered  
-        $display("a1 Event --> Received at : %0t", $time);
+        @(a2.triggered);         // Blocking assignment          // Edge triggered  
+        $display("a2 Event --> Received at : %0t", $time);
     end
     
 //  "wait" operator takes in the event_name followed by triggered function call

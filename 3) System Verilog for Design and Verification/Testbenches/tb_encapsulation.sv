@@ -82,10 +82,10 @@ frame fr = new( add1, data1 );
      
      fr.no_protection = 1; // OK
      one.no_protection = 0; // OK
-     one.errcount = 0; // ERROR
-     one.parity= 1; // ERROR
-     one.add_error(); // OK
-     no_errs= one.errcount; // ERROR
+//     one.errcount = 0; // ERROR
+//     one.parity= 1; // ERROR
+//     one.add_error(); // OK
+//     no_errs= one.errcount; // ERROR
      no_errs= errframe::geterr();// OK
  end
 
