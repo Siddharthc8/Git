@@ -153,13 +153,13 @@ super.new(inst,c);
 endfunction
  
 driver d;
-uvm_sequencer #(transaction) seq;
+uvm_sequencer #(transaction) seqr;
  
  
 virtual function void build_phase(uvm_phase phase);
 super.build_phase(phase);
 d = driver::type_id::create("DRV",this);
-seq = uvm_sequencer #(transaction)::type_id::create("seq",this);
+seqr = uvm_sequencer #(transaction)::type_id::create("seqr",this);
 endfunction
  
 virtual function void connect_phase(uvm_phase phase);
@@ -213,8 +213,8 @@ env e;
       
                                                 // By default they go alternatively
     fork  
-       s2.start(e.a.seq, null, 200);            // Here SEQ 2 has more priority than SEQ 1 so SEQ 2 is executed first
-       s1.start(e.a.seq, null, 100);  
+       s2.start(e.a.seqr, null, 200);            // Here SEQ 2 has more priority than SEQ 1 so SEQ 2 is executed first
+       s1.start(e.a.seqr, null, 100);  
     join  
       
       
