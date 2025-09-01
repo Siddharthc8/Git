@@ -39,7 +39,7 @@ module tb_modport_in_interface();
          busmaster M1 (.mbus(busa));
          busslave S1 (.sbus(busa));
      endmodule
-     
+      
      module testbench_1;
          mod_if busb();
          busmaster M2 ( .mbus(busb.master) );   // here the testbench restricts what the module can access

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 02/02/2025 12:17:59 PM
+// Create Date: 02/02/2025 12:08:59 PM
 // Design Name: 
-// Module Name: tb_polymorphism
+// Module Name: tb_virtual
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_polymorphism();
+module tb_virtual();
 
 class base;
 
-    function void i_am();   
+    virtual function void i_am();   // Once virtual is declared here all subclasses can ignore using as it is hierarchical
         $display("Base");
     endfunction
 
@@ -32,16 +32,16 @@ endclass
 
 class parent extends base;
 
-    function void i_am();
-        $display("Parent");
+    virtual function void i_am();   // "Virtual" keyword is optional but is used to know that base class is virtual
+        $display("Base");
     endfunction
 
 endclass
 
 class child extends parent;
 
-    function void i_am();
-        $display("Child");
+    virtual function void i_am();  // "Virtual" keyword is optional but is used to know that base class is virtual
+        $display("Base");
     endfunction
 
 endclass
@@ -54,13 +54,12 @@ endclass
     
     initial begin
         
-        b1 = p1;       
-        b1.i_am();     // Prints "Base" 
-                       // Checks the handle if not superior class ie "b1" is checked "p1" is ignored
+        b1 = p1;
+        b1.i_am();    // Prints "Parent"
+                      // Using virtual gives precedence to the sub_class and then to superior ie "p1" is checked first.
         p1 = c1;
-        p1.i_am();     // Prints "Parent" as that is highest in the hierarchy for now as after the "c" was passed to "p" we did not pass "p" to "b" after that
+        p1.i_am();   // Prints "Child"
         
-        // NOTE : If "i_am" method not available in parent class it check its superior class ie "Base"
     end
 
 

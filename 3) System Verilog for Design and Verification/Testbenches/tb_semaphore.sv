@@ -51,7 +51,7 @@ class Main;
   
   task send_first();
     
-        sem.get(123);     // Getting semaphore access is by semaphore_name.get(key_name)       //   Blocking assignment
+        sem.get(1);     // Getting semaphore access is by semaphore_name.get(no_of_keys)       //   Blocking assignment
     
     for(i = 0; i<10; i++) begin
       f.randomize();
@@ -61,14 +61,14 @@ class Main;
     end 
     
     
-    sem.put(123);        //  Putting back the semaphore that used           //   Blocking assignment
+    sem.put(1);        //  Putting back the semaphore that used           //   Blocking assignment
     
     $display("Semaphore Unoccupied");
   endtask
   
   
   task send_second();
-    sem.get(123);       // Getting semaphore access is by semaphore_name.get(key_name)       //   Blocking assignment
+    sem.get(1);       // Getting semaphore access is by semaphore_name.get(no_of_keys)       //   Blocking assignment
     
     for(i = 0; i<10; i++) begin   
       s.randomize();
@@ -77,7 +77,7 @@ class Main;
       #10;
     end  
     
-    sem.put(123);     //  Putting back the semaphore that used           //   Blocking assignment
+    sem.put(1);     //  Putting back the semaphore that used           //   Blocking assignment
     $display("Semaphore Unoccupied");
     
   endtask
