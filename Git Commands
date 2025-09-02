@@ -1,2 +1,59 @@
+// To initialize a directory as a repository 
+  git init
+
+
+// To add the repository as working repo/origin (https)
+  git remote set-url https://github.com/Siddharthc8/Git.git       ( To change )
+                            (OR)
+  git remote add origin https://github.com/Siddharthc8/Git.git   ( To initailize and new one)
+
+
+// To know the origin linked to the terminal
+  git remote -v
+
+
+// To push to the origin main
+  git push -u origin main
+
 // Show hidden folders
-ls -a
+  ls -a
+
+
+// To check the status of the files
+  git status
+
+
+// To check the versions
+  git log                          // (HEAD -> main) points to the latest commit
+                                   // (origin/main, origin/HEAD) points to the main branch users use 
+
+
+// To add the changes ready to be committed in other words "staging"
+  git add <file_name.txt>    
+  git add .                         // "." represents all
+  Note : The code changes to green when they are added
+
+
+// To remove the staged/added files 
+  git restore --staged <names.txt>     // For specific file
+  git restore --staged .               // For all files/changes
+
+
+// To commit the messages to the repo
+  git commit -m "<message for commit>"
+
+
+// Go back to previous version after commiting
+  git reset <hash_id of the version>
+
+
+// Stashing the added files to a separate stack (use this when you don't want to commit and don't want to lose progress)
+  // When aw stash the whole local repo goes to previous commit 
+  git add .
+  git stash 
+
+// To retieve/restore from stash
+  git stash pop
+
+
+  
