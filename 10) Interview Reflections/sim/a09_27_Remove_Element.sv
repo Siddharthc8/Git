@@ -3,7 +3,7 @@
  
 
 
-module a9_27_Remove_Element();
+module a09_27_Remove_Element();
 
 class solutions;
     // Method 1: Two-pointer in-place removal (optimal)

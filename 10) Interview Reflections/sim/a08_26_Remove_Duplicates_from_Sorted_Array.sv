@@ -3,7 +3,7 @@
 
 
 
-module a8_26_Remove_Duplicates_from_Sorted_Array();
+module a08_26_Remove_Duplicates_from_Sorted_Array();
 
 class Solutions;
     

@@ -3,7 +3,7 @@
 
 
 
-module a6_14_Longest_Common_Prefix();
+module a06_14_Longest_Common_Prefix();
 
   class solutions;
     // Method: Find longest common prefix

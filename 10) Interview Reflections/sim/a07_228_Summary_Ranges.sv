@@ -3,7 +3,7 @@
 
 
 
-module a7_228_Summary_Ranges();
+module a07_228_Summary_Ranges();
     
   class solutions;
     // Method: Generate summary ranges

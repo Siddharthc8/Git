@@ -3,7 +3,7 @@
 
 
 
-module a2_1768_Merge_Strings_Alternately();
+module a02_1768_Merge_Strings_Alternately();
 
 class solutions;
 
