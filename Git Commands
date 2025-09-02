@@ -4,6 +4,13 @@
 // To clone a repository
   git clone https://github.com/Siddharthc8/Git.git
 
+
+// To pull a repo
+    git pull    (make sure to be on the right director usually initialized automatically)
+        (OR) 
+    git pull <git link>
+
+
 // To add the repository as working repo/origin (https)
   git remote set-url https://github.com/Siddharthc8/Git.git       ( To change )
                             (OR)
