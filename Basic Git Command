@@ -22,7 +22,8 @@
 
 
 // To push to the origin main
-  git push -u origin main
+  git push                        // To push to the branch
+  git push -u origin main         // To push to the main branch
 
 // Show hidden folders
   ls -a
@@ -69,6 +70,13 @@
 
 /////////////.   Branching and advance concepts     //////////////////
 
-git branch <name>
+// To branch out
+  git branch <feature_branch_name>
 
   
+// To move from feature branch to main branch
+  git checkout main
+
+
+// To merge the feature branch to main branch
+  git merge <feature_branch_name>
