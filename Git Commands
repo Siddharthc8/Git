@@ -1,6 +1,8 @@
 // To initialize a directory as a repository 
   git init
 
+// To clone a repository
+  git clone https://github.com/Siddharthc8/Git.git
 
 // To add the repository as working repo/origin (https)
   git remote set-url https://github.com/Siddharthc8/Git.git       ( To change )
