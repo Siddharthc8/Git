@@ -65,4 +65,10 @@
   git stash pop
 
 
+
+
+/////////////.   Branching and advance concepts     //////////////////
+
+git branch <name>
+
   
