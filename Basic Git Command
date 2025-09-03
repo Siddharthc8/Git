@@ -29,7 +29,7 @@
 
 // To push to the origin main
   git push                        // To push to the feature branch
-  git push origin main
+  git push origin main           // To push to the main branch
   git push -u origin main         // To push to the main branch
 
 // Show hidden folders
@@ -94,5 +94,5 @@
   git remote add upstream <url>
 
 
-// When we stash or reset to earlier commit and want to push with some files short to original upstream main, we have to force push
+// When we stash or reset to earlier commit and want to push with some commits short to original upstream main, we have to force push
   git push original my_branch -f         // f stands for force push
