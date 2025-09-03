@@ -29,7 +29,7 @@
 
 // To push to the origin main
   git push                        // To push to the feature branch
-  git push origin main           // To push to the main branch
+  git push origin main           // To push to the main branch`
   git push -u origin main         // To push to the main branch
 
 // Show hidden folders
@@ -90,9 +90,22 @@
   git merge <feature_branch_name>
 
 
-// To fork an existing repo use the command
+// To fork an existing repo use the command (upstream means forked area)
   git remote add upstream <url>
 
 
 // When we stash or reset to earlier commit and want to push with some commits short to original upstream main, we have to force push
   git push original my_branch -f         // f stands for force push
+
+
+// Let's say you have a fork repo and you branch and work and you push the branched work to the origin repo which leaves the main branch out of syn cuz you did not merge.
+// So to make main branch of forked repo and main brnach of origin repo in sync 
+// So basically the branch of fork updated origin main and your forked main is lagging behind
+  git checkout main 
+  git fetch --all --prune      // prune means that the ones deleted will also be fetched 
+  git reset --hard upstream/main
+  git push origin main
+
+
+// We can also do it by
+  git pull upstream main
