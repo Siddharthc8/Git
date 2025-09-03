@@ -75,7 +75,7 @@
   git branch <feature_branch_name>
 
   
-// To assignthe default branch for commit when branching
+// To assign the default branch for commit when branching
   git checkout main               // To assign where commits will happen
   git checkout <branch_name>
 
@@ -83,5 +83,3 @@
 // To merge the feature branch to main branch
   git merge <feature_branch_name>
 
-
-fsg
