@@ -77,8 +77,11 @@
 
 /////////////.   Branching and advance concepts     //////////////////
 
-// To branch out
+// To create/branch out
   git branch <feature_branch_name>
+
+// To delete a branch
+  git branch -d branch-name
 
   
 // To assign the default branch for commit when branching
