@@ -112,3 +112,11 @@
 
 // We can also do it by
   git pull upstream main
+
+
+
+
+// SED
+// May not be related to git
+To replace all the iterations in a directory
+  sed -i 's/<old_str>/<new_str>/g' *.sv
